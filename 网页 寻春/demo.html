@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 仿宋;
+    }
+    .container{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 1100px;
+    }
+    .container .card{
+      position: relative;
+      width: 320px;
+      height: 320px;
+      margin: 15px;
+      overflow: hidden;
+    }
+    .container .card .images,
+    .container .card .content-container{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+    }
+    .container .card .images img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .container .card .content-container::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #99c2ad;
+      transform: scaleX(0);
+      transition: transfrom 0.5s ease-in-out;
+      transform-origin: right;
+      transition-delay: 0.5s;
+    }
+    .container .card:hover .content-container::before{
+      transform: scaleX(1);
+      transition: transfrom 0.5s ease-in-out;
+      transform-origin: left;
+      transition-delay: 0.5s;
+    }
+    .container .card:hover .content-container{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container .card .content-container .content{
+      position: relative;
+      padding: 30px;
+      z-index: 1;
+      transition: 0.5s;
+      transform: translateX(-300px);
+      transition-delay: 0s;
+    }
+    .container .card:hover .content-container .content{
+      transform: translateX(0px);
+      transition-delay: 0.5s;
+    }
+    .container .card .content-container .content h3{
+      font-size: 1.3em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .container .card .content-container .content p{
+      font-size: 1em;
+      line-height: 1.4em;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="images">
+        <img src="./images/图2.jpg" alt="">
+      </div>
+      <div class="content-container">
+<div class="content">
+  <h3>
+aa
+  </h3>
+  <p>春光在万山怀抱里，更是泄露得很。那里的桃花还是开着，漫游的薄云从这峰飞过那峰，有时稍停一会，为的是挡住太阳，使地面的花草在它的阴下避避光焰的威吓。</p>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="images">
+        <img src="./images/图2.jpg" alt="">
+      </div>
+      <div class="content-container">
+<div class="content">
+  <h3>
+aa
+  </h3>
+  <p>春光在万山怀抱里，更是泄露得很。那里的桃花还是开着，漫游的薄云从这峰飞过那峰，有时稍停一会，为的是挡住太阳，使地面的花草在它的阴下避避光焰的威吓。</p>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="images">
+        <img src="./images/图2.jpg" alt="">
+      </div>
+      <div class="content-container">
+<div class="content">
+  <h3>
+aa
+  </h3>
+  <p>春光在万山怀抱里，更是泄露得很。那里的桃花还是开着，漫游的薄云从这峰飞过那峰，有时稍停一会，为的是挡住太阳，使地面的花草在它的阴下避避光焰的威吓。</p>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="images">
+        <img src="./images/图2.jpg" alt="">
+      </div>
+      <div class="content-container">
+<div class="content">
+  <h3>
+aa
+  </h3>
+  <p>春光在万山怀抱里，更是泄露得很。那里的桃花还是开着，漫游的薄云从这峰飞过那峰，有时稍停一会，为的是挡住太阳，使地面的花草在它的阴下避避光焰的威吓。</p>
+</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

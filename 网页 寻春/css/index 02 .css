@@ -1,0 +1,514 @@
+/* 清楚默认样式 */
+*{
+  margin: 0;
+  padding: 0;
+  /* 内减模式 */
+  box-sizing: border-box;
+}
+/* 清除浮动带来的影响 */
+.clearfix::before,.clearfix::after{
+  content: "";
+  display: table;
+  
+}
+.clearfix::after{
+  clear: both;
+}
+body{
+  /*background-image: url(../images/背景图5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  background: linear-gradient(90deg,#fafbf8,#dbeac7);
+}
+.paint{
+  display: flex;
+  width: 100wh;
+}
+/* 版心 */
+.wrapper{
+  width: 1400px;
+  margin: 0 auto;
+}
+/* 导航栏 */
+.nav{
+  float: left;
+  /* margin-left: 100px; */
+  height: 80px;
+  background-color: #c5c7bc;
+ 
+  width: 2000px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  /* 隐藏 */
+  transition: all 0.5s;
+}
+
+.nav li{
+  float: left;
+  margin-right: 50px;
+  margin-left: 50px;
+  }
+  .nav li a{
+    display: block;
+    padding: 0 9px;
+    /* border-bottom: 2px solid #00a4f0; */
+    height: 70px;
+    line-height: 80px;
+    font-size: 22px;
+    color: black;
+  }
+  .nav li a:hover{
+    border-bottom: 2px solid #949b95; 
+  }
+  .nav h1{
+    color: rgb(111, 135, 98);
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: 仿宋;
+  font-size: 50px;
+  float: left;
+  margin-left: 40px;
+  line-height: 80px;
+  }
+  /* 搜素 */
+  /*
+.search{
+  float: left;
+  width: 412px;
+  height: 40px;
+  border: 1px solid #00a4ff;
+  margin-left: 70px;
+  margin-top: 20px;
+ */
+/* } */
+/*
+.search img{
+  height: 38px;
+  width: 52px;
+  margin: 0 auto;
+  border: 2px solid #246f97;
+}*/
+/* 导航栏显示 */
+.show{
+  opacity: 1;
+  z-index: 1000;
+}/*
+.search input {
+  float: left;
+  padding-left: 20px;
+  
+  width: 360px;
+  height: 38px;
+  border: 0;
+}
+/* 控制placeholder的样式 */
+/*
+.search input::placeholder{
+  font-size: 14px;
+  color: #bfbfbf;
+}
+.search button{
+  width: 50px;
+  height: 40px;
+  float: left;
+ vertical-align: middle;
+}*/
+/* 固定导航栏 */
+
+/* 清除下划线 */
+a{
+  text-decoration: none;
+}
+/* 清楚列表的圆点 */
+li{
+  list-style: none;
+}
+/* 头部 */
+.header{
+  height: 90px;
+margin: 30px auto;
+border-bottom: 1px solid #0b662f;
+}
+.header a{
+  color: rgb(111, 135, 98);
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: 仿宋;
+  font-size: 60px;
+}
+/* .titlePhoto img{ */
+  /* height: 85px; */
+  /* width: 200px; */
+  /* float: left; */
+/* } */
+/* 头部文字 */
+.word{
+  color: rgb(124, 161, 119);
+  font-family: 'Times New Roman', Times, serif;
+}
+.wrapper .spring{
+  color: #0b662f;
+  font-size: larger;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* 轮播图 1*/
+/*
+.banner{
+  width: 880px;
+  height: 420px;
+  margin: 0 auto;
+  background-color: #9d94c9;
+  background-image: url(../images/图5.webp);
+ 
+  background-repeat: no-repeat;
+  position: relative;
+}*/
+/* 轮播图图片 */
+/*
+.banner img{
+  width: 100%;
+  height: 100%;
+  display: none;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}*/
+/* 轮播图大盒子容器 */
+.container{
+  
+    width: 1400px;
+    height: 800px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    position: relative;
+  overflow: hidden;
+  display: flex;
+  
+}
+/* 大图 */
+.slider{
+  position: absolute;
+  inset: 80px 200px 80px 80px;
+  
+  border-radius: 20px;
+  box-shadow: 0 10px 10px #201e1e;
+  
+}
+/* 小图 */
+.box{
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  transition: .5s;
+  box-shadow:0 20px 20px #757070;
+  border: 2px solid #fff;
+  
+}
+/* 各个小图片 */
+.box:nth-child(1),
+.box:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+  box-shadow: 0 20px 20px #f3e9e9;
+}
+.box:nth-child(3){
+  left: calc(50% + 240px);
+}
+.box:nth-child(4){
+  left: calc(50% + 500px);
+}
+.box:nth-child(5){
+  left: calc(50% + 760px);
+}
+.box:nth-child(6){
+  left: calc(50% + 1020px);
+  opacity: 0;
+}
+/* 左右按钮 位置*/
+.buttons{
+  position: absolute;
+  bottom: 350px;
+  left: 17%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 910px;
+}
+/* 左右按钮样式 */
+.buttons span{
+  
+position: relative;
+width: 50px;
+height: 50px;
+background-color: #1a5f41;
+cursor: pointer;
+display: none;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+color: #fff;
+font-size: 24px;
+font-weight: bold;
+}
+.buttons span:active{
+  opacity: 0.5;
+}
+.buttons span:hover{
+  background-color: #afcecf;
+}
+/* 诗句 部分*/
+.poem-container{
+  height: 900px;
+}
+.poem{
+  height: 700px;
+  /* overflow: hidden; */
+  white-space: nowrap;
+  /* 将 overflow 改为 auto，当内容超出时显示滚动条 */
+  overflow: auto;
+}
+
+/* 诗句部分的盒子样式 */
+.poem .box1{
+  
+  display: inline-block;
+  /* 间距 */
+  margin-right: 20px;
+   margin-bottom: 14px;
+  width: 325px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, .3);
+  box-shadow: 5px 5px 5px 5px #0b662f;
+  border: 1px solid #b8b8b8;
+   border-radius: 10%;
+   transition: all .2s;
+   /* 添加文本在框内垂直和水平居中 */
+   text-align: center;
+   /* align-items: center; */
+   line-height: 60px;
+  
+   
+}
+
+
+.poem .box1:nth-child(4){
+  background-color: #cfeedf;
+}
+.poem .box1:nth-child(5){
+  background-color: #9cebc3;
+}
+.poem .box1:nth-child(6){
+  background-color: #6cd19e;
+}
+.poem .box1:nth-child(7){
+  background-color: #45d48c;
+}
+.poem .box1:nth-child(8){
+  background-color: #28965f;
+}
+.poem .box1:nth-child(9){
+  background-color: #177948;
+}
+.poem .box1:nth-child(10){
+  background-color: #32845b;
+}
+
+
+
+
+/* 诗句的字体等 */
+.poem .box1 p{
+  
+  font-size: 30px;
+  color: #1c1d1e;
+  font-family:'Courier New', Courier, monospace
+}
+.poem .box1:hover{
+  height: 610px;
+  width: 330px;
+}
+.poem .more:hover{
+  color: red;
+}
+h2{
+  color: #213623;
+  font-family: 仿宋;
+  font-size: 40px;  
+  
+}
+/* 每个部分的标题 */
+.name{
+  height: 60px;
+  width: 250px;
+  display: flex;
+  background-color: #c0e8b0;
+  border: 2px solid #141515;
+  border-radius: 10%;
+  align-items: center;
+    box-shadow:5px 10px 10px #4b535f;
+}
+
+/* 油画 */
+/* 大盒子 */
+.image-container {
+  
+  overflow: hidden;
+  height: 1100px;
+  position: relative;
+  
+}
+/* 油画图片 */
+.image-container img{
+  width: 400px;
+  display: inline-block;
+  height: 400px;
+  margin-left: 40px;
+  margin-top: 50px;
+  transition: all 0.5s ease;
+  border-radius: 10%;
+  border: 2px solid #eaf3f4;
+  overflow: hidden;
+  
+}
+/* 图片悬停效果 */
+.image-container img:hover {
+ /* width: 410px; */
+ /* height: 410px; */
+ transform: scale(1.1);
+ 
+}
+
+/* 弹框样式 */
+.bigpopup{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  background-color: rgba(227, 240, 235, 0.7);
+  width: 100vw;
+  height: 100vw;
+    /* 添加毛玻璃模糊效果 */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    /* 兼容 Safari 浏览器 */
+}
+.popup {
+  display: none;
+  position: fixed;
+  border-radius: 5%;
+  border: 2px solid #141515;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background-color: rgba(194, 170, 170, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1002;
+ 
+ 
+}
+/* 关闭按钮 */
+.closePopup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  color: rgb(59, 87, 14);
+  cursor: pointer;
+  
+}
+.closePopup:hover{
+  color: brown;
+}
+
+/* 视频 */
+.vlog{
+  height: 800px;
+}
+video{
+  width: 800px;
+  height: 500px;
+  border-radius: 2%;
+  float: left;
+}
+.video img{
+  width: 500px;
+  height: 480px;
+  float: left;
+  margin-top: 22px;
+  
+}
+/* 节气 */
+.jieqi{
+  height: 900px;
+  
+}
+/* 双开门 */
+.middle{
+  margin: 0 auto;
+  width: 1000px;
+  height: 700px;
+ display: flex;
+ background-image: url(../images/春分2.jpg);
+ 
+  overflow: hidden;
+  border-radius: 5%;
+}
+.left{
+  
+  width: 500px;
+  height: 700px;
+  transition: all 2s;
+  background-image: url(../images/春分.jpg);
+}
+.right{
+  
+  width: 500px;
+  height: 700px;
+  transition: all 2s;
+  background-image: url(../images/谷雨.jpg);
+
+}
+.middle:hover .left{
+  transform: translate(-100%);
+}
+.middle:hover .right{
+  transform: translateX(100%);
+}
+
+/* 回到顶部 */
+.toTop{
+  
+  position: fixed;
+  right: 30px;
+  bottom: 120px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e7f0eb;
+  border: 1px solid #434749;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.totopshow{
+  opacity: 1;
+}
